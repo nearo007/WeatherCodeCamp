@@ -17,7 +17,7 @@ def index(request):
         context = {
             'location': location,
             'country_code': str(json_data['sys']['country']),
-            'temp': str(json_data['main']['temp']),
+            'temp': str(int((json_data['main']['temp']) - 273.15)),
             'pressure': str(json_data['main']['pressure']),
             'humidity': str(json_data['main']['humidity'])
         }

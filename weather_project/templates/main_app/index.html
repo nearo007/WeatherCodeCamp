@@ -1,27 +1,31 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
 </head>
 <body>
-    <h1>CRIADO COM POUCO</h1>
+    <div class="container">
+        <h1 class="title">Weather Checker</h1>
 
-    <form action="" method="post">
-        {% csrf_token %}
-        <input type="text" name="location">
+        <form method="post" class="weather-form">
+            {% csrf_token %}
+            <input type="text" name="location" placeholder="Enter a city..." required />
+            <button type="submit">Check</button>
+        </form>
 
-        <button type="submit">Check Weather</button>
-    </form>
-
-    {% if location %}
-        <h1>Location: {{ location }}</h1>
-        <h1>Country: {{ country_code }}</h1>
-        <h1>Temperature: {{ temp }}</h1>
-        <h1>Pressure: {{ pressure }}</h1>
-        <h1>Humity: {{ humidity }}</h1>
-
-    {% endif %}
+        {% if location %}
+        <div class="weather-result">
+            <h2>🌍 {{ location }} ({{ country_code }})</h2>
+            <p>🌡️ Temperatura: {{ temp }}°C</p>
+            <p>🔽 Pressão: {{ pressure }} hPa</p>
+            <p>💧 Humidade: {{ humidity }}%</p>
+        </div>
+        {% endif %}
+    </div>
 </body>
 </html>
