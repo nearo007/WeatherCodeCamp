@@ -22,8 +22,8 @@ Este é um simples aplicativo web construído com **Django** que permite ao usu�
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
+   git clone https://github.com/nearo007/WeatherCodeCamp
+   cd weather_project
 2. Ative o ambiente virtual e instale as dependências:
    ```bash
    source venv/bin/activate  # no Windows: venv\Scripts\activate
