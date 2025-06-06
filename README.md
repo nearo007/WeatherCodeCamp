@@ -31,3 +31,6 @@ Este é um simples aplicativo web construído com **Django** que permite ao usu�
 ## API Utilizada
 
 Este projeto consome dados da OpenWeatherMap API, um serviço gratuito (com planos pagos) que fornece informações meteorológicas em tempo real. É necessário gerar uma chave de API gratuita para utilizar o serviço.
+
+![Screenshot 2025-06-06 145352](https://github.com/user-attachments/assets/378f1109-459d-45bb-b849-90c1c7496dba)
+
