@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 import json
 import urllib.request
-import dotenv, os
+from urllib.parse import quote
 
 from .config import open_weather_api_key
 
@@ -9,11 +9,17 @@ from .config import open_weather_api_key
 def index(request):
     if request.method == 'POST':
         location = str(request.POST['location']).capitalize()
+        location_formated = quote(location)
 
-        res = urllib.request.urlopen(f'http://api.openweathermap.org/data/2.5/weather?q={location}&appid={open_weather_api_key}').read()
+        res = urllib.request.urlopen(f'http://api.openweathermap.org/data/2.5/weather?q={location_formated}&appid={open_weather_api_key}').read()
         
         json_data = json.loads(res)
         
+        location_words = location.split(' ')
+        
+        for word in location_words:
+            location = location.replace(word, word.capitalize())
+
         context = {
             'location': location,
             'country_code': str(json_data['sys']['country']),

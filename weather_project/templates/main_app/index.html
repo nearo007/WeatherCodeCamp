@@ -10,11 +10,11 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Weather Checker</h1>
+        <h1 class="title">Verificar Temperatura</h1>
 
         <form method="post" class="weather-form">
             {% csrf_token %}
-            <input type="text" name="location" placeholder="Enter a city..." required />
+            <input type="text" name="location" placeholder="Insira uma cidade..." required />
             <button type="submit">Check</button>
         </form>
 
