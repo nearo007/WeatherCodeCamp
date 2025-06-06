@@ -27,7 +27,7 @@ Este é um simples aplicativo web construído com **Django** que permite ao usu�
 2. Ative o ambiente virtual e instale as dependências:
    ```bash
    source venv/bin/activate  # no Windows: venv\Scripts\activate
-    pip install -r requirements.txt
+   pip install -r requirements.txt
 ## API Utilizada
 
 Este projeto consome dados da OpenWeatherMap API, um serviço gratuito (com planos pagos) que fornece informações meteorológicas em tempo real. É necessário gerar uma chave de API gratuita para utilizar o serviço.
